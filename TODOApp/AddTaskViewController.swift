@@ -119,8 +119,8 @@ extension AddTaskViewController {
   }
   
   func setupConstraints() {
-    scrollView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-    scrollView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+    scrollView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor).isActive = true
+    scrollView.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor).isActive = true
     scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
     scrollView.bottomAnchor.constraint(equalTo: bottomView.topAnchor).isActive = true
     
@@ -167,13 +167,13 @@ extension AddTaskViewController {
     stackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
     stackView.centerXAnchor.constraint(equalTo: bottomView.centerXAnchor).isActive = true
     stackView.heightAnchor.constraint(equalToConstant: 60).isActive = true
-    stackView.widthAnchor.constraint(equalToConstant: 330).isActive = true
+    stackView.widthAnchor.constraint(equalToConstant: 270).isActive = true
     
     addButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
-    addButton.widthAnchor.constraint(equalToConstant: 150).isActive = true
+    addButton.widthAnchor.constraint(equalToConstant: 120).isActive = true
     
     cancelButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
-    cancelButton.widthAnchor.constraint(equalToConstant: 150).isActive = true
+    cancelButton.widthAnchor.constraint(equalToConstant: 120).isActive = true
   }
   
   @objc func addAction() {
